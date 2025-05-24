@@ -25,7 +25,7 @@ st.write(f"**New Breakeven Price:** ${new_breakeven:.2f}")
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
-st.write("Below profit calculations include all previous trades.")
+st.write("Note: Below profit calculations include all previous trades.")
 
 if stock_price != 0:
     roi_exer = (call_strike_price - new_breakeven) / stock_price
