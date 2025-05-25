@@ -35,7 +35,8 @@ else:
 st.write(f"**Return On Investment:** {roi_exer * 100:.2f}%")
 
 profit_exer = roi_exer * total_cost
-st.write(f"**Profit:** ${profit_exer:.2f}")
+#st.write(f"**Profit:** ${profit_exer:.2f}")
+st.success(f"Profit: {profit_exer:.2f}%")  # Green box
 
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
