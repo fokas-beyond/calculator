@@ -2,6 +2,11 @@ import streamlit as st
 
 st.title("Covered Call Calculator (Existing Shares)")
 
+st.markdown("---")  # adds a horizontal line
+# --------------------------------------------------------------------
+
+st.markdown("<h4><b>Stock Data:</b></h4>", unsafe_allow_html=True)
+
 stock_price = st.number_input("Stock Price", value=0.00, format="%.2f")
 qty_shares = st.number_input("Number of Shares", value=0)
 
@@ -11,6 +16,8 @@ st.success(f"Total Cost: ${total_cost:.2f}")  # Green box
 
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
+
+st.markdown("<h4><b>Options Data:</b></h4>", unsafe_allow_html=True)
 
 previous_breakeven = st.number_input("Previous Breakeven Price", value=0.00, format="%.2f")
 
@@ -27,7 +34,7 @@ st.success(f"New Breakeven Price: ${new_breakeven:.2f}")  # Green box
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
-st.markdown("<h4><b>In case the option is exercised:</b></h4>", unsafe_allow_html=True)
+st.markdown("<h4><b>In case the call option is exercised:</b></h4>", unsafe_allow_html=True)
 st.markdown("<h4><b>Note: Below profit calculations include all previous trades.</b></h4>", unsafe_allow_html=True)
 
 if stock_price != 0:
@@ -44,7 +51,7 @@ st.success(f"Profit: ${profit_exer:.2f}")  # Green box
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
-st.markdown("<h4><b>In case the option is not exercised:</b></h4>", unsafe_allow_html=True)
+st.markdown("<h4><b>In case the call option is not exercised:</b></h4>", unsafe_allow_html=True)
 
 if stock_price != 0:
     roi_not_exer = (call_premium - put_premium) / stock_price
