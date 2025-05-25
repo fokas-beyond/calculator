@@ -42,7 +42,7 @@ if stock_price != 0:
 else:
     roi_exer = 0  # or use None, or display a message
 #st.write(f"**Return On Investment:** {roi_exer * 100:.2f}%")
-st.success(f"Return On Investment: {roi_exer:.2f}%")  # Green box
+st.success(f"ROI: {roi_exer:.2f}%")  # Green box
 
 profit_exer = roi_exer * total_cost
 #st.write(f"**Profit:** ${profit_exer:.2f}")
@@ -58,7 +58,7 @@ if stock_price != 0:
 else:
     roi_not_exer = 0  # or use None, or display a message
 #st.write(f"**Return On Investment:** {roi_not_exer * 100:.2f}%")
-st.success(f"Return On Investment: {roi_not_exer:.2f}%")  # Green box
+st.success(f"ROI: {roi_not_exer:.2f}%")  # Green box
 
 profit_not_exer = roi_not_exer * total_cost
 #st.write(f"**Profit:** ${profit_not_exer:.2f}")
