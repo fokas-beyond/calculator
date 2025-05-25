@@ -32,11 +32,12 @@ if stock_price != 0:
     roi_exer = (call_strike_price - new_breakeven) / stock_price
 else:
     roi_exer = 0  # or use None, or display a message
-st.write(f"**Return On Investment:** {roi_exer * 100:.2f}%")
+#st.write(f"**Return On Investment:** {roi_exer * 100:.2f}%")
+st.success(f"Return On Investment: {roi_exer:.2f}%")  # Green box
 
 profit_exer = roi_exer * total_cost
 #st.write(f"**Profit:** ${profit_exer:.2f}")
-st.success(f"Profit: {profit_exer:.2f}%")  # Green box
+st.success(f"Profit: ${profit_exer:.2f}")  # Green box
 
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
