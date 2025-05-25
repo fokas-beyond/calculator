@@ -25,7 +25,7 @@ st.write(f"**New Breakeven Price:** ${new_breakeven:.2f}")
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
-st.write("In case the option is exercised:")
+st.markdown("<h4><b>In case the option is exercised:</b></h4>", unsafe_allow_html=True)
 st.write("Note: Below profit calculations include all previous trades.")
 
 if stock_price != 0:
