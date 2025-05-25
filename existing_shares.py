@@ -26,7 +26,7 @@ st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
 st.markdown("<h4><b>In case the option is exercised:</b></h4>", unsafe_allow_html=True)
-st.write("<h4><b>Note: Below profit calculations include all previous trades.</b></h4>")
+st.markdown("<h4><b>Note: Below profit calculations include all previous trades.</b></h4>")
 
 if stock_price != 0:
     roi_exer = (call_strike_price - new_breakeven) / stock_price
@@ -40,7 +40,7 @@ st.write(f"**Profit:** ${profit_exer:.2f}")
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
-st.write("<h4><b>In case the option is not exercised:</b></h4>")
+st.markdown("<h4><b>In case the option is not exercised:</b></h4>")
 
 if stock_price != 0:
     roi_not_exer = (call_premium - put_premium) / stock_price
