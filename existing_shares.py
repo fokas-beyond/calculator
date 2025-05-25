@@ -25,25 +25,28 @@ st.write(f"**New Breakeven Price:** ${new_breakeven:.2f}")
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
 
+st.write("In case the option is exercised:")
 st.write("Note: Below profit calculations include all previous trades.")
 
 if stock_price != 0:
     roi_exer = (call_strike_price - new_breakeven) / stock_price
 else:
     roi_exer = 0  # or use None, or display a message
-st.write(f"**ROI (Exer.):** {roi_exer * 100:.2f}%")
+st.write(f"**Return On Investment:** {roi_exer * 100:.2f}%")
 
 profit_exer = roi_exer * total_cost
-st.write(f"**Profit (Exer.):** ${profit_exer:.2f}")
+st.write(f"**Profit:** ${profit_exer:.2f}")
 
 st.markdown("---")  # adds a horizontal line
 # --------------------------------------------------------------------
+
+st.write("In case the option is not exercised:")
 
 if stock_price != 0:
     roi_not_exer = (call_premium - put_premium) / stock_price
 else:
     roi_not_exer = 0  # or use None, or display a message
-st.write(f"**ROI (Not Exer.):** {roi_not_exer * 100:.2f}%")
+st.write(f"**Return On Investment:** {roi_not_exer * 100:.2f}%")
 
 profit_not_exer = roi_not_exer * total_cost
-st.write(f"**Profit (Not Exer.):** ${profit_not_exer:.2f}")
+st.write(f"**Profit:** ${profit_not_exer:.2f}")
