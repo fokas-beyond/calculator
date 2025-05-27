@@ -19,7 +19,7 @@ st.markdown("---")  # adds a horizontal line
 
 st.markdown("<h4><b>Options Data:</b></h4>", unsafe_allow_html=True)
 
-previous_breakeven = st.number_input("Previous Breakeven Price", value=0.00, format="%.2f")
+previous_breakeven = st.number_input("Latest Breakeven Price", value=0.00, format="%.2f")
 
 call_strike_price = st.number_input("Call Option Strike Price", value=0.00, format="%.2f")
 call_premium = st.number_input("Call Option Premium", value=0.00, format="%.2f")
